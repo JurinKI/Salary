@@ -49,11 +49,20 @@ public class TotalSalary  {
 	public double salary() {
 		double sum = 0;
 		
-        if(this.sales<=50000) {
-            sum = this.salary+(this.sales*0.05);
-        }else
-            sum = this.salary+(this.sales*0.10);
+		if(salary<=10000)
+		{
+			if(sales<=50000) {
+			sum = salary+(sales*0.05);
+		}else
+			sum = salary+(sales*0.10);
+		}
 		
+		else {
+			if(sales<=100000) {
+				sum = salary+(sales*0.05);
+			}else
+				sum = salary+(sales*0.10);
+		}
 		return sum;
 	}
 	
